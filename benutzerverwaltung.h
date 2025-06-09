@@ -14,6 +14,8 @@ public:
     shared_ptr<Benutzer> BenutzerAnlegen();
     void BenutzerLöschen(shared_ptr<Benutzer>);
 
+    void addBenutzer(shared_ptr<Benutzer> &v);
+
     shared_ptr<Benutzer> findBenutzer(const string Kontonummer);
     shared_ptr<Verbindung> findVerbindung(const string verbindungsNummer);
 

@@ -5,6 +5,7 @@
 #include "benutzer.h"
 #include "benutzerverwaltung.h"
 #include"json.hpp"
+#include "mainwindow.h"
 #include <QMessageBox>
 #include <QObject>
 #include <QFile>
@@ -33,6 +34,7 @@ private:
     QFile *file;
     QString Filename;
     BenutzerVerwaltung *benutzerVerwaltung;
+    MainWindow* mainWindow;
 };
 
 #endif // FILEHANDLER_H

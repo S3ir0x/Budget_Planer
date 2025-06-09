@@ -1,5 +1,7 @@
 #include "mainwindow.h"
+#include "qmessagebox.h"
 #include "ui_mainwindow.h"
+#include "QString"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -15,4 +17,9 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::erfolgsmeldungEinlesen(int Benutzer_Counter)
+{
+    QMessageBox::information(this,"Erfolg", "Daten wurden Erfolgreich eingelesen: Test:" + QString::number(Benutzer_Counter));
 }

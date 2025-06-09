@@ -17,6 +17,8 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    void erfolgsmeldungEinlesen(int Benutzer_Counter);
+
 private:
     Ui::MainWindow *ui;
 };

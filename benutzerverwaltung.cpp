@@ -2,6 +2,11 @@
 
 BenutzerVerwaltung::BenutzerVerwaltung(vector<shared_ptr<Benutzer> > BenutzerListe) : benutzerListe(BenutzerListe) {}
 
+void BenutzerVerwaltung::addBenutzer(shared_ptr<Benutzer> &v)
+{
+    benutzerListe.push_back(v);
+}
+
 shared_ptr<Benutzer> BenutzerVerwaltung::findBenutzer(const string Kontonummer)
 {
     for(size_t i = 0; 0 < benutzerListe.size(); i++) {

@@ -5,11 +5,16 @@ Benutzer::Benutzer()
 
 }
 
-Benutzer::Benutzer(string Name, vector<shared_ptr<Verbindung>> Verbindungen, string Kontonummer, bool Status, string Passwort, string Type) : name(Name), verbindungen(Verbindungen), kontonummer(Kontonummer), status(Status), passwort(Passwort), type(Type) {}
+Benutzer::Benutzer(const string &Name, const string &Kontonummer, const bool &Status, const string &Passwort, const string &Type) : name(Name), kontonummer(Kontonummer), status(Status), passwort(Passwort), type(Type) {}
 
 Benutzer::~Benutzer()
 {
 
+}
+
+void Benutzer::addVerbindungen(const shared_ptr<Verbindung> &v)
+{
+    verbindungen.push_back(v);
 }
 
 

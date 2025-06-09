@@ -9,11 +9,12 @@ class Benutzer
 {
 public:
     Benutzer();
-    Benutzer(string Name, vector<shared_ptr<Verbindung>> Verbindungen, string Kontonummer, bool Status, string Passwort, string Type);
+    Benutzer(const string &Name, const string &Kontonummer, const bool &Status, const string &Passwort, const string &Type);
 
     ~Benutzer();
 
     void PasswortÄndern();
+    void addVerbindungen(const shared_ptr<Verbindung>& v);
 
     string getName() const;
     void setName(const string &newName);
